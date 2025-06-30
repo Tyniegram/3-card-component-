@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css" />
+
+<title>My Personal Brand</title>
+<meta
+name="description"
+content="Welcome to Joseph Akilozi's personal brand website. Learn more about me, contact me, and book an appointment."
+/>
+</head>
+<body>
+<header>
+<h1>AY.DEV</h1>
+</header>
+
+<main>
+<section id="about">
+<img src="images/IMG_1792.jpg" alt="Joseph Akilozi" />
+
+<div>
+<h2>About Me</h2>
+<p>
+... am Joseph Akilozi, a passionate developer. I love creating and
+sharing my work with the world.
+</p>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+<p>
+If you'd like to get in touch, please reach out via email at:
+<a href="Josephakilozi@gmail.com">Josephakilozi@gmail.com</a>
+</p>
+</section>
+
+<h3>BOOK AN APPOINTMENT</h3>
+<form id="brandForm" onsubmit="handleSubmit(event)">
+<label for="fname">Full Name:</label>
+<input type="text" id="fname" name="fname" required />
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required />
+
+<label for="phone">Phone Number:</label>
+<input type="tel" id="phone" name="phone" />
+
+<label for="service">Service Interested In:</label>
+<select id="service" name="service">
+<option value="">Select an option</option>
+<option value="consulting">Consulting</option>
+<option value="collaboration">Collaboration</option>
+<option value="other">Other</option>
+</select>
+
+<label for="date">Preferred Date:</label>
+<input type="date" id="date" name="date" />
+
+<label for="budget">Project Budget Range</label>
+<select id="budget" name="budget">
+<option value="" disabled selected>Select budget range</option>
+<option value="500-1000">$500 - $1,000</option>
+<option value="1000-3000">$1,000 - $3,000</option>
+<option value="3000-5000">$3,000 - $5,000</option>
+<option value="5000+">$5,000+</option>
+</select>
+</div>
+
+<label for="duration">Session Length</label>
+<select id="duration" name="duration">
+<option value="30">30 minutes</option>
+<option value="60" selected>60 minutes</option>
+<option value="90">90 minutes</option>
+</select>
+
+
+<label for="time">Preferred Time:</label>
+<input type="time" id="time" name="time" />
+
+
+<button type="submit">Submit</button>
+</form>
+
+<div id="confirmation" style="display: none">
+<h3>Thank You</h3>
+<p>
+Your form has been submitted successfully. You will hear from us soon.
+</p>
+</div>
+
+<div id="error" style="display: none">
+<h3>Oops</h3>
+<p>There was an error submitting your form. Please try again.</p>
+</div>
+</main>
+
+<footer>
+<p>&copy; 2025 Joseph Akilozi. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+function handleSubmit(event) {
+event.preventDefault();
+document.getElementById("brandForm").style.display = "none";
+document.getElementById("confirmation").style.display = "block";
+}
+
+</script>
+
+</body>
+</html>

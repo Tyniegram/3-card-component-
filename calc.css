@@ -1,0 +1,136 @@
+:root {
+  --lime: hsl(61, 70%, 52%);
+  --red: hsl(4, 69%, 50%);
+  --white: hsl(0, 0%, 100%);
+  --slate-100: hsl(202, 86%, 94%);
+  --slate-300: hsl(203, 41%, 72%);
+  --slate-500: hsl(200, 26%, 54%);
+  --slate-700: hsl(200, 24%, 40%);
+  --slate-900: hsl(202, 55%, 16%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--slate-100);
+  color: var(--slate-900);
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-container {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+.calculator-title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--slate-900);
+  text-align: center;
+}
+
+.calculator-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-group label {
+  font-weight: 500;
+  color: var(--slate-700);
+}
+
+.input-group input {
+  padding: 0.75rem;
+  border: 1px solid var(--slate-300);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--slate-500);
+  box-shadow: 0 0 0 2px var(--slate-100);
+}
+
+.error-message {
+  color: var(--red);
+  font-size: 0.875rem;
+  min-height: 1.25rem;
+}
+
+.calculate-btn {
+  background-color: var(--slate-900);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.calculate-btn:hover, .calculate-btn:focus {
+  background-color: var(--slate-700);
+  outline: none;
+}
+
+.results-container {
+  margin-top: 2rem;
+  background-color: var(--slate-100);
+  padding: 1.5rem;
+  border-radius: 8px;
+  display: grid;
+  gap: 1rem;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-item span:first-child {
+  color: var(--slate-700);
+}
+
+.result-item span:last-child {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--slate-900);
+}
+
+@media (min-width: 768px) {
+  .calculator-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .calculate-btn {
+    grid-column: span 2;
+  }
+  
+  .calculator-title {
+    font-size: 2rem;
+  }
+}

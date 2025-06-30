@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortgage Repayment Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="calc.css" />
+  </head>
+  <body>
+    <main class="calculator-container">
+      <h1 class="calculator-title">Mortgage Repayment Calculator</h1>
+
+      <form id="mortgage-form" class="calculator-form">
+        <div class="input-group">
+          <label for="property-value">Property Value (£)</label>
+          <input
+            type="number"
+            id="property-value"
+            name="property-value"
+            required
+          />
+          <span class="error-message" id="property-value-error"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="deposit">Deposit (£)</label>
+          <input type="number" id="deposit" name="deposit" required />
+          <span class="error-message" id="deposit-error"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="interest-rate">Interest Rate (%)</label>
+          <input
+            type="number"
+            id="interest-rate"
+            name="interest-rate"
+            step="0.01"
+            required
+          />
+          <span class="error-message" id="interest-rate-error"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="loan-term">Loan Term (years)</label>
+          <input
+            type="number"
+            id="loan-term"
+            name="loan-term"
+            min="1"
+            max="10"
+            required
+          />
+          <span class="error-message" id="loan-term-error"></span>
+        </div>
+
+        <button type="submit" class="calculate-btn">Calculate</button>
+      </form>
+
+      <div class="results-container" id="results" aria-live="polite">
+        <div class="result-item">
+          <span>Monthly Repayment</span>
+          <span id="monthly-repayment">£0.00</span>
+        </div>
+        <div class="result-item">
+          <span>Total Repayment</span>
+          <span id="total-repayment">£0.00</span>
+        </div>
+        <div class="result-item">
+          <span>Total Interest</span>
+          <span id="total-interest">£0.00</span>
+        </div>
+      </div>
+    </main>
+
+    <script src="calc.js"></script>
+  </body>
+</html>

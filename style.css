@@ -1,0 +1,230 @@
+
+      
+      /* Global Styles */
+      :root {
+        --primary-color: #ffffff;
+        --secondary-color: #000000;
+        --accent-color: #e74c3c;
+        --light-color:#f1efec(255, 255, 255);
+        --dark-color: #000000(0, 0, 0);
+        --text-color: #333;
+        --text-light: #fff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--light-color);
+      }
+
+      /* Header Styles */
+      header {
+        background-color:255 255 255;
+        color: 0, 0, 0;
+        padding: 1rem;
+        text-align: left;
+        box-shadow: 0 2px 5px rgba(254, 253, 253, 0.1);
+        background-color: #ffffff;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+      }
+
+      /* Main Content Styles */
+      main {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* About Section with Flexbox */
+      #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background-color: rgb(254, 124, 49);
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+     /* About Section */
+      #about h1 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-size: 2rem;
+      }
+      #about img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid var(--primary-color);
+      }
+
+      #about div {
+        text-align: center;
+      }
+
+      #about h2 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+      }
+
+      /* Contact Section */
+      #contact {
+        background-color: rgb(252, 129, 59);
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 3rem;
+        text-align: center;
+      }
+
+      #contact h2 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+      }
+
+      #contact a {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      #contact a:hover {
+        text-decoration: underline;
+      }
+
+      /* Form Section */
+      h3 {
+        text-align: center;
+        margin: 2rem 0;
+        color: var(--secondary-color);
+        font-size: 1.5rem;
+      }
+
+      #brandForm {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--dark-color);
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+
+      input:focus,
+      select:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+      }
+
+      button {
+        background-color:rgba(0, 0, 0, 0.1);
+        color: rgb(255, 255, 255);
+        border: none;
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.1s;
+      }
+
+      button:hover {
+        background-color: var(--secondary-color);
+      }
+
+      /* Confirmation Messages */
+      #confirmation,
+      #error {
+        text-align: center;
+        padding: 2rem;
+        background-color: rgb(149, 202, 153);
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 2rem auto;
+      }
+
+      #confirmation h3 {
+        color: var(--primary-color);
+      }
+
+      #error h3 {
+        color: var(--accent-color);
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        background-color:255 255 255;
+        color:0, 0, 0;
+        margin-top: 3rem;
+      }
+
+      /* Responsive Design */
+      @media (min-width: 768px) {
+        #about {
+          flex-direction: row;
+          text-align: left;
+        }
+
+        #about div {
+          text-align: left;
+        }
+
+        #brandForm {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        button {
+          grid-column: span 2;
+          width: 50%;
+          justify-self: center;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        header h1 {
+          font-size: 3rem;
+        }
+
+        #about img {
+          width: 250px;
+          height: 250px;
+        }
+      }
